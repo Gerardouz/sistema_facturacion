@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sistema de Facturacion</title>
+<link rel="stylesheet"   type="text/css" href="{% static 'css/login.css'%}"/>
+</head>
+<body>
+<form action="/bienvenido" > 
+<h2>Identificacion</h2>
+ <p>Usuario 
+ <p>
+  <input type="text" name="usuario" id="usuario" />
+   <p>Contraseña </p><input type= "password" name="contraseña" id="contraseña"  />
+
+   <input type = "submit" value = "ingresar"  />
+
+</form>
+</body>
+</html>
