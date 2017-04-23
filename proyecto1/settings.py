@@ -79,12 +79,11 @@ WSGI_APPLICATION = 'proyecto1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql_cymysql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'facturacion',
-        'USER': 'root',
-        'PASSWORD': 'admin',
-        'HOST':'localhost',
-        'PORT': '3306',
+        'USER': 'gerardouz13',
+        'PASSWORD': '2339113103gG',
+        'HOST': 'gerardouz13.mysql.pythonanywhere-services.com',
     }
 }
 
