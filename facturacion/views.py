@@ -1,16 +1,25 @@
 from django.shortcuts import render
 from django.template import loader, Context
 from django.http import HttpResponse
-from facturacion.models import login_administrador, login_facturador
+from facturacion.models import Facturador
 
 def login(request):
-	administrador = login_administrador.objects.all()
-	facturador = login_facturador.objects.all()
+	
+	facturador = Facturador.objects.all()
 	my_login = loader.get_template("login.html")
-	mi_context = Context({'administrador':administrador})
+	mi_context = Context({'facturador':facturador})
 	return HttpResponse(my_login.render(mi_context))
 def bienvenido(request):
+	facturador = Facturador.objects.all()
+	html = "<html><body>Bienvenido {{facturador.Nombre</body></html>"
+	return HttpResponse(html)
+
+
+
+
+	"""
 	administrador = login_administrador.objects.all()
-	my_loader = loader.get_template("bienvenido.html")
+	html = loader.get_template("bienvenido.html")
 	context = Context({'administrador':administrador})
-	return HttpResponse(my_loader.render(context))
+	return HttpResponse(html.render(context))
+	"""
