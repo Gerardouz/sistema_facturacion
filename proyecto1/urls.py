@@ -19,7 +19,7 @@ from facturacion.views import bienvenido
 
 
 urlpatterns = [
-	url(r'^$',include("facturacion.urls")),
+	url(r'^',include("facturacion.urls")),
     url(r'^admin/', admin.site.urls),
     url(r'^bienvenido/', bienvenido),
 ]
